@@ -27,4 +27,4 @@ Doc Table Formatter is a lightweight Google Docs add-on that styles tables in Go
 
 ## Contact
 
-mdesandoli@gmail.com
+support@goodlytools.ca
