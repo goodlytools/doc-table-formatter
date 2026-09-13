@@ -2,28 +2,88 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Doc Table Formatter – Privacy Policy</title>
+<title>Doc Table Formatter — Privacy Policy</title>
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<style>body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;max-width:720px;margin:48px auto;padding:0 16px;color:#222;line-height:1.55}h1{margin-bottom:0}p.lead{color:#555}a{color:#0b57d0}h2{margin-top:1.6em}</style>
+<style>
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 780px; margin: 48px auto; padding: 0 16px; color: #222; line-height: 1.6 }
+h1 { margin-bottom: 0 }
+p.lead { color: #555 }
+a { color: #0b57d0 }
+h2 { margin-top: 1.8em }
+h3 { margin-top: 1.4em }
+code { background: #f7f8fa; padding: 1px 5px; border-radius: 3px; font-size: 0.92em }
+.scope-list { background: #f7f8fa; border-left: 3px solid #0b57d0; padding: 12px 16px; margin: 12px 0 }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #666; font-size: 0.9em }
+</style>
 </head>
 <body>
+
 <p><a href="./">← Doc Table Formatter</a></p>
+
 <h1>Privacy Policy</h1>
-<p class="lead">Last updated: May 9, 2026</p>
-<p>Doc Table Formatter ("the Add-on") is a Google Docs editor add-on that helps users format tables inside their own Google Docs. This Privacy Policy explains what data the Add-on accesses and how it is handled.</p>
-<h2>1. Information We Access</h2>
-<p>The Add-on uses the OAuth scope <code>https://www.googleapis.com/auth/documents.currentonly</code>, which only allows access to the single Google Doc the user has explicitly opened the Add-on in. The Add-on reads and modifies table formatting (bold text styling, header fill color, row or column banding colors, and column widths) in that document only when the user clicks a button in the Add-on sidebar.</p>
-<h2>2. Information We Do Not Collect</h2>
-<p>The Add-on does not collect, store, transmit, sell, or share any personal data, document content, or usage analytics. No data leaves the user's Google account. There is no server component; all logic runs inside Google Apps Script under the user's own Google session.</p>
-<h2>3. Data Storage</h2>
-<p>The Add-on does not persist any user data. It does not use Google Apps Script's PropertiesService, CacheService, or any external database to store user content.</p>
-<h2>4. Third Parties</h2>
-<p>The Add-on does not share data with third parties. It does not use external APIs, analytics, advertising networks, or tracking services.</p>
-<h2>5. Children's Privacy</h2>
-<p>The Add-on is not directed to children under 13 and does not knowingly collect information from them.</p>
-<h2>6. Changes to This Policy</h2>
-<p>We may update this policy from time to time. The "Last updated" date above will reflect the most recent change.</p>
-<h2>7. Contact</h2>
-<p>For questions about this Privacy Policy, contact: <a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a></p>
+<p class="lead">Last updated: September 13, 2026</p>
+
+<p>This Privacy Policy explains how the <strong>Doc Table Formatter</strong> Google Workspace add-on (referred to as "the Add-on") handles user data. Doc Table Formatter is published by <strong>Goodly Tools</strong>, a personal project operated by Michael DeSandoli, contactable at <a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a>. The Add-on is offered free of charge through the Google Workspace Marketplace.</p>
+
+<p>Short version: the Add-on runs entirely inside your Google Docs session. It does not collect, store, transmit, sell, or share any personal information or document content. Nothing leaves your Google account.</p>
+
+<h2>1. What Google permissions the Add-on requests</h2>
+<p>When you install or first open the Add-on, Google will ask you to grant the following OAuth scopes. Each is used only for the purpose stated below.</p>
+<div class="scope-list">
+<h3><code>https://www.googleapis.com/auth/documents.currentonly</code></h3>
+<p>Grants access <em>only</em> to the single Google Doc you have actively opened when you invoke the Add-on. The Add-on uses this scope to read the structure of the table containing your cursor (rows, columns, cells) and to apply table-formatting changes (cell background color, text bold styling, column widths) to that same table. It cannot see, read, or modify any other document in your Google Drive.</p>
+
+<h3><code>https://www.googleapis.com/auth/script.container.ui</code></h3>
+<p>Allows the Add-on to render its own user interface inside Google Docs: specifically, the sidebar that contains the formatting controls (via <code>DocumentApp.getUi().showSidebar()</code>) and the <em>Extensions → Table Formatter</em> menu item (via <code>DocumentApp.getUi().createMenu()</code>). This scope is used solely to display the Add-on's own controls; it is not used to load external web content, host third-party pages, or display advertising.</p>
+
+<h3><code>https://www.googleapis.com/auth/userinfo.email</code> and <code>https://www.googleapis.com/auth/userinfo.profile</code></h3>
+<p>These scopes are added automatically by the Google Workspace Marketplace framework. They allow Google to identify the signed-in user for installation and for support inquiries. The Add-on itself does not access, store, transmit, or use the values returned by these scopes.</p>
+</div>
+
+<h2>2. What data the Add-on does not collect</h2>
+<p>The Add-on does <strong>not</strong>:</p>
+<ul>
+<li>Collect, transmit, or store any document content, personal data, or usage analytics.</li>
+<li>Send data to any external server or third-party service. There is no backend.</li>
+<li>Use tracking pixels, advertising SDKs, analytics libraries, or fingerprinting.</li>
+<li>Share, sell, rent, or trade user data with any third party.</li>
+<li>Persist user data using Google Apps Script's <code>PropertiesService</code>, <code>CacheService</code>, or any external database.</li>
+</ul>
+<p>All logic runs inside the Google Apps Script runtime attached to your active Google Docs session. Formatting changes are made directly to your document through the Google Docs API; no copy of your document content is transmitted anywhere else.</p>
+
+<h2>3. Data retention</h2>
+<p>Because the Add-on does not collect or store any user data, there is nothing to retain and nothing to delete. Your document content stays where it always was — in your own Google Drive under your Google account.</p>
+
+<h2>4. Your rights and control</h2>
+<p>You can uninstall the Add-on and revoke all granted permissions at any time from your Google Account:</p>
+<ul>
+<li>In Google Docs: <em>Extensions → Add-ons → Manage add-ons</em>, then uninstall Doc Table Formatter.</li>
+<li>To revoke OAuth access separately: visit <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>, locate Doc Table Formatter, and remove access.</li>
+</ul>
+<p>Because no data is stored on any server we operate, uninstalling the Add-on removes all access. There is no separate data-deletion request to make.</p>
+
+<h2>5. Third-party services</h2>
+<p>The Add-on does not integrate with, or transmit data to, any third-party service other than the Google APIs required to display its sidebar and edit the currently open document. It does not use external analytics providers, error-tracking providers, or advertising networks.</p>
+
+<h2>6. Children's privacy</h2>
+<p>The Add-on is not directed to children under 13. It does not knowingly collect any information from children, because it does not collect information from any user.</p>
+
+<h2>7. Security</h2>
+<p>The Add-on operates within Google's Apps Script runtime and inherits Google's security posture for Google Workspace add-ons. Because the Add-on has no server component, it does not transmit or store credentials, tokens, or user content outside of Google's infrastructure.</p>
+
+<h2>8. Changes to this policy</h2>
+<p>We may update this Privacy Policy from time to time. Any changes will be posted at <a href="https://goodlytools.ca/privacy.html">this URL</a> with an updated "Last updated" date at the top. Continued use of the Add-on after a change constitutes acceptance of the revised policy.</p>
+
+<h2>9. Governing law</h2>
+<p>This Privacy Policy is governed by the laws of British Columbia, Canada.</p>
+
+<h2>10. Contact</h2>
+<p>Questions about this Privacy Policy, or about how the Add-on handles data, can be sent to:</p>
+<p><a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a></p>
+
+<footer>
+&copy; 2026 Goodly Tools. Doc Table Formatter is not affiliated with or endorsed by Google.
+</footer>
+
 </body>
 </html>
