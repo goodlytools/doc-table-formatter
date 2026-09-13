@@ -2,48 +2,84 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Doc Table Formatter</title>
+<title>Doc Table Formatter — Google Docs Table Styling Add-on</title>
+<meta name="description" content="Doc Table Formatter is a free Google Docs add-on that formats tables with header styling, row/column banding, custom colors, and one-click column-width tools — all from a sidebar inside your document.">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <style>
-body {
-font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
-max-width: 720px;
-margin: 48px auto;
-padding: 0 16px;
-color: #222;
-line-height: 1.55
-}
-h1 {
-margin-bottom: 0
-}
-p.lead {
-color: #555;
-margin-top: 6px
-}
-a {
-color: #0b57d0
-}
-ul.features li { margin: 4px 0 }
+body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; max-width: 780px; margin: 48px auto; padding: 0 16px; color: #222; line-height: 1.6 }
+h1 { margin-bottom: 0 }
+p.lead { color: #555; margin-top: 6px; font-size: 1.05em }
+h2 { margin-top: 1.8em; border-bottom: 1px solid #eee; padding-bottom: 4px }
+h3 { margin-top: 1.4em; margin-bottom: 0.4em }
+a { color: #0b57d0 }
+ul.features li { margin: 6px 0 }
+ol.steps li { margin: 8px 0 }
+.cta { background: #0b57d0; color: #fff; padding: 10px 18px; border-radius: 4px; text-decoration: none; display: inline-block; margin: 8px 0 }
+.cta:hover { background: #0847a8 }
+.screenshot { max-width: 100%; border: 1px solid #ddd; border-radius: 4px; margin: 12px 0; display: block }
+.scope-list { background: #f7f8fa; border-left: 3px solid #0b57d0; padding: 12px 16px; margin: 12px 0 }
+.scope-list code { font-size: 0.9em }
+footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #666; font-size: 0.9em }
 </style>
 </head>
 <body>
+
 <h1>Doc Table Formatter</h1>
-<p class="lead">A Google Docs add-on for fast, consistent table formatting.</p>
-<p>Doc Table Formatter helps you style tables in Google Docs from a sidebar. It only touches the document you currently have open.</p>
-<h2>Features</h2>
+<p class="lead">A free Google Docs add-on for fast, consistent table formatting — from a sidebar inside your document.</p>
+
+<p><strong>Doc Table Formatter</strong> is a Google Workspace add-on published by <a href="#about">Goodly Tools</a> that helps you style tables in Google Docs without leaving your document. It runs entirely inside the Google Doc you have open: pick a table with your cursor, open the sidebar, and apply header styling, row or column banding, custom fill colors, and column-width adjustments in one click.</p>
+
+<p>The add-on only ever touches the single document you have open. It never reads, modifies, stores, or transmits any other document, and it has no external server.</p>
+
+<h2>Get the add-on</h2>
+<p><a class="cta" href="https://workspace.google.com/marketplace/app/doc_table_formatter/163159087826">Install from Google Workspace Marketplace</a></p>
+<p><em>Note: the Marketplace listing is currently in review. Once approved, the link above installs Doc Table Formatter into your Google Docs.</em></p>
+
+<h2>What it does</h2>
+<img class="screenshot" src="/screenshots/sidebar.png" alt="Doc Table Formatter sidebar in Google Docs showing header, banding, and column-width controls">
 <ul class="features">
-<li>Bold text styling for Header Row, Total Row, First Column, and Last Column</li>
-<li>Header fill color with a preset palette plus a full custom color picker (hex supported)</li>
-<li>Row banding or Column banding with customizable odd/even colors and a one-click swap button</li>
-<li>Column Width tools &mdash; Distribute Columns evenly, or Best Fit to minimize overall table height</li>
-<li>One-click Apply and Clear formatting</li>
+<li><strong>Header &amp; special-row styling.</strong> Bold text for Header Row, Total Row, First Column, and Last Column — toggle any combination.</li>
+<li><strong>Header fill color.</strong> Pick from a preset palette or use a full color picker with hex input for exact brand colors.</li>
+<li><strong>Row or column banding.</strong> Alternate two colors across rows or columns, with customizable odd/even values and a one-click swap button.</li>
+<li><strong>Column-width tools.</strong> Distribute Columns evenly, or use Best Fit to minimize overall table height based on cell content.</li>
+<li><strong>One-click Apply and Clear.</strong> Apply your current settings to the selected table, or strip formatting back to defaults.</li>
 </ul>
-<h2>Resources</h2>
+
+<h2>How to use it</h2>
+<ol class="steps">
+<li>Install Doc Table Formatter from the Google Workspace Marketplace (link above).</li>
+<li>Open any Google Doc that contains at least one table.</li>
+<li>Click <strong>Extensions → Table Formatter → Open sidebar</strong>.</li>
+<li>Place your cursor inside the table you want to format.</li>
+<li>Choose your styling options in the sidebar and click <strong>Apply</strong>.</li>
+</ol>
+
+<h2>What permissions it needs</h2>
+<p>Doc Table Formatter requests only the minimum Google permissions it needs to render its sidebar and format the table in the document you have open:</p>
+<div class="scope-list">
 <ul>
+<li><code>.../auth/documents.currentonly</code> — access <em>only</em> the Google Doc you are actively editing when you open the add-on, so it can read the table structure and apply formatting. It cannot see any other document in your Drive.</li>
+<li><code>.../auth/script.container.ui</code> — display the add-on's sidebar and the "Extensions → Table Formatter" menu item inside Google Docs. This is used solely to render the add-on's own user interface.</li>
+<li><code>.../auth/userinfo.email</code> and <code>.../auth/userinfo.profile</code> — required by Google Workspace Marketplace to identify the signed-in user during installation and for support requests. The add-on itself does not use these values.</li>
+</ul>
+</div>
+<p>See the <a href="./privacy.html">Privacy Policy</a> for full details on what the add-on does and does not do with your data. Short version: nothing leaves your Google account.</p>
+
+<h2 id="about">About Goodly Tools</h2>
+<p>Goodly Tools is a personal project by Michael DeSandoli, operating at <a href="https://goodlytools.ca/">goodlytools.ca</a>. Doc Table Formatter is its first Google Workspace add-on. There is no company, no data collection, and no monetization; the add-on is provided free of charge.</p>
+
+<h2>Support &amp; legal</h2>
+<ul>
+<li><a href="./support.html">Support</a> — how to get help</li>
 <li><a href="./privacy.html">Privacy Policy</a></li>
 <li><a href="./terms.html">Terms of Service</a></li>
+<li><a href="./optout.html">Draft-tester opt-out</a></li>
+<li>Contact: <a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a></li>
 </ul>
-<h2>Contact</h2>
-<p><a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a></p>
+
+<footer>
+&copy; 2026 Goodly Tools. Doc Table Formatter is not affiliated with or endorsed by Google. "Google", "Google Docs", and "Google Workspace" are trademarks of Google LLC.
+</footer>
+
 </body>
 </html>
