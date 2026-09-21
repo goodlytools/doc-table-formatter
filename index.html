@@ -32,8 +32,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #
 <p>The add-on only ever touches the single document you have open. It never reads, modifies, stores, or transmits any other document, and it has no external server.</p>
 
 <h2>Get the add-on</h2>
-<p><a class="cta" href="https://workspace.google.com/marketplace/app/doc_table_formatter/163159087826">Install from Google Workspace Marketplace</a></p>
-<p><em>Note: the Marketplace listing is currently in review. Once approved, the link above installs Doc Table Formatter into your Google Docs.</em></p>
+<p>The Google Workspace Marketplace listing is currently under review. Public installation is not yet available.</p>
 
 <h2>What it does</h2>
 <ul class="features">
@@ -46,9 +45,9 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #
 
 <h2>How to use it</h2>
 <ol class="steps">
-<li>Install Doc Table Formatter from the Google Workspace Marketplace (link above).</li>
+<li>After public approval, install Doc Table Formatter from the Google Workspace Marketplace. If you already have the add-on installed, continue below.</li>
 <li>Open any Google Doc that contains at least one table.</li>
-<li>Click <strong>Extensions → Table Formatter → Open sidebar</strong>.</li>
+<li>Click <strong>Extensions → Doc Table Formatter → Open sidebar</strong>.</li>
 <li>Place your cursor inside the table you want to format.</li>
 <li>Choose your styling options in the sidebar and click <strong>Apply</strong>.</li>
 </ol>
@@ -58,7 +57,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #
 <div class="scope-list">
 <ul>
 <li><code>.../auth/documents.currentonly</code> — access <em>only</em> the Google Doc you are actively editing when you open the add-on, so it can read the table structure and apply formatting. It cannot see any other document in your Drive.</li>
-<li><code>.../auth/script.container.ui</code> — display the add-on's sidebar and the "Extensions → Table Formatter" menu item inside Google Docs. This is used solely to render the add-on's own user interface.</li>
+<li><code>.../auth/script.container.ui</code> — display the add-on's sidebar and the "Extensions → Doc Table Formatter" menu item inside Google Docs. This is used solely to render the add-on's own user interface.</li>
 <li><code>.../auth/userinfo.email</code> and <code>.../auth/userinfo.profile</code> — required by Google Workspace Marketplace to identify the signed-in user during installation and for support requests. The add-on itself does not use these values.</li>
 </ul>
 </div>
