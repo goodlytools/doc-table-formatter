@@ -21,7 +21,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #
 <p><a href="./">← Doc Table Formatter</a></p>
 
 <h1>Privacy Policy</h1>
-<p class="lead">Last updated: September 13, 2026</p>
+<p class="lead">Last updated: September 21, 2026</p>
 
 <p>This Privacy Policy explains how the <strong>Doc Table Formatter</strong> Google Workspace add-on (referred to as "the Add-on") handles user data. Doc Table Formatter is published by <strong>Goodly Tools</strong>, a personal project operated by Michael DeSandoli, contactable at <a href="mailto:support@goodlytools.ca">support@goodlytools.ca</a>. The Add-on is offered free of charge through the Google Workspace Marketplace.</p>
 
@@ -34,7 +34,7 @@ footer { margin-top: 3em; padding-top: 1em; border-top: 1px solid #eee; color: #
 <p>Grants access <em>only</em> to the single Google Doc you have actively opened when you invoke the Add-on. The Add-on uses this scope to read the structure of the table containing your cursor (rows, columns, cells) and to apply table-formatting changes (cell background color, text bold styling, column widths) to that same table. It cannot see, read, or modify any other document in your Google Drive.</p>
 
 <h3><code>https://www.googleapis.com/auth/script.container.ui</code></h3>
-<p>Allows the Add-on to render its own user interface inside Google Docs: specifically, the sidebar that contains the formatting controls (via <code>DocumentApp.getUi().showSidebar()</code>) and the <em>Extensions → Table Formatter</em> menu item (via <code>DocumentApp.getUi().createMenu()</code>). This scope is used solely to display the Add-on's own controls; it is not used to load external web content, host third-party pages, or display advertising.</p>
+<p>Allows the Add-on to render its own user interface inside Google Docs: specifically, the sidebar that contains the formatting controls (via <code>DocumentApp.getUi().showSidebar()</code>) and the <em>Extensions → Doc Table Formatter</em> menu item (via <code>DocumentApp.getUi().createMenu()</code>). This scope is used solely to display the Add-on's own controls; it is not used to load external web content, host third-party pages, or display advertising.</p>
 
 <h3><code>https://www.googleapis.com/auth/userinfo.email</code> and <code>https://www.googleapis.com/auth/userinfo.profile</code></h3>
 <p>These scopes are added automatically by the Google Workspace Marketplace framework. They allow Google to identify the signed-in user for installation and for support inquiries. The Add-on itself does not access, store, transmit, or use the values returned by these scopes.</p>
